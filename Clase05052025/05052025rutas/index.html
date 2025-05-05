@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            width: 100%;
+        }
+        .form-container input {
+            width: 90%; /* Reduce el ancho para que no llegue al tope */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container button {
+            width: 90%; /* Alinea el botón con los campos de entrada */
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Iniciar Sesión</h2>
+        <form>
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+            
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+</body>
+</html>
