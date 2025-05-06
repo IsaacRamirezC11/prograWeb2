@@ -3,64 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <!-- Enlace al CSS de Materialize -->
+    <title>Bienvenido</title>
+    <!-- Enlace a Materialize CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Enlace a styles.css -->
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
     <!-- Barra de navegación -->
-    <nav class="blue">
+    <nav class="teal">
         <div class="nav-wrapper container">
-            <a href="#" class="brand-logo">MiApp</a>
+            <a href="#" class="brand-logo">Mi App</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#!">Inicio</a></li>
-                <li><a href="#!">Acerca de</a></li>
-                <li><a href="#!">Contacto</a></li>
+                <li><a href="#inicio">ICO</a></li>
+                <li><a href="#acerca">FES</a></li>
+                <li><a href="#contacto">ARAGÓN</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Contenido principal -->
-    <div class="container">
-        <h1 class="center-align">Bienvenido a MiApp</h1>
+    <div class="container center-align" id="inicio">
+        <h1 class="teal-text text-darken-2">Bienvenido a ver mis estilos desde Node</h1>
+        <p class="flow-text">Tarea de uso de CSS</p>
+        <a class="waves-effect waves-light btn teal" href="#acerca">CHECK</a>
+    </div>
+
+    <!-- Sección Acerca -->
+    <div class="section" id="acerca">
         <div class="row">
-            <div class="col s12 m6 offset-m3">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSauMbE08BCT7CiLUsENt101pFHFzMTuaDH5w&s" alt="Imagen de ejemplo">
-                        <span class="card-title">Tarjeta de ejemplo</span>
-                    </div>
-                    <div class="card-content">
-                        <p>Esta es una tarjeta de ejemplo utilizando Materialize. Puedes personalizarla con tu propio contenido.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#!">Leer más</a>
-                    </div>
-                </div>
+            <div class="col s12 m6">
+                <h5 class="teal-text">¿Qué es esto?</h5>
+                <p>Ejemplo del uso de rutas y estilos con una plantilla de materialize</p>
             </div>
         </div>
     </div>
 
-    <!-- Pie de página -->
-    <footer class="page-footer blue">
+    <!-- Footer -->
+    <footer class="page-footer teal">
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <h5 class="white-text">MiApp</h5>
-                    <p class="grey-text text-lighten-4">Este es un pie de página de ejemplo utilizando Materialize.</p>
+                    <h5 class="white-text">Mi App</h5>
+                    <p class="grey-text text-lighten-4">Usado node para verla en el local y visualizar el puerto y el uso de rutas </p>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2025 MiApp. Todos los derechos reservados.
+                Programacion Web 2 
             </div>
         </div>
     </footer>
-
-    <!-- Script de Materialize -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
