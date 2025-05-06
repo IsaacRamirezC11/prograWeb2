@@ -1,17 +1,18 @@
-//importar express
-const express = require('express');
+//Importar express
+const express= require('express');
 
-//Generar una instancia de express
-
+//creacion de una instancia
 const app = express();
 
-//definicion de puerto
-const port = 5023;
+//definir el puerto
+const port = 3099;
 
-//peticiones vs metodos
-//ESTA ES UNA PETICION GET
-app.get('/', (req, res) => {
-    res.send('Hola Mundo desde puerto 5023');    
+//Configuracion de ruta get para la raiz ('/')
+app.get('/',(req,res)=>{
+    res.send('Hola mundo');
 });
 
-app.listen(port);
+app.listen(port, () => {
+    console.log(`Servidor funcional por la URL: http://127.0.0.1:${port}`);
+    }
+);
