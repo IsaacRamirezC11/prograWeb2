@@ -40,7 +40,7 @@ db.connect(err => {
 const PORT = 3006;
 
 app.listen(PORT, () => {
-    console.log(`Server funcionando en el puerto https://127.0.0.1:${port}`);
+    console.log(`Server funcionando en el puerto http://127.0.0.1:${PORT}`);
 });
 
 //Mostrar lista de los usuarios

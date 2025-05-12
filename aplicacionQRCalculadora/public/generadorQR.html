@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="/dd.png" type="image/x-icon">
+    <title>GENERADOR QR</title>
+</head>
+<body>
+    
+    <header>
+        <h1 style="text-align: center;">Generar un QR con API</h1>
+    </header>
+
+    <div style="margin: 50px;">
+        <div>
+            <label for="input1">Nombre: </label>
+                <input type="text" id="input1" required maxlength="150" placeholder="Escribe tu nombre" />
+            <br> <br>
+            <label for="input2">Correo: </label>
+                <input type="text" id="input2" required maxlength="100" placeholder="Ingresa tu apellido" />
+            <br> <br>
+            <label for="input3">Selecciona tu escuela o institución: </label>
+                <input type="text" id="input3" required list="listaEscuelas">
+                <datalist id="listaEscuelas">
+                    <option value="IPN">Politecnico</option>
+                    <option value="FESAR">Faculta de Estudios Superiores Aragon</option>
+                    <option value="U.A.M.">Universidad Autonoma Metropolitana</option>
+                    <option value="CU">Ciudad Universitaria</option>
+                </datalist>
+            <br> <br>
+            <label for="input4">Dependecia: </label>
+                <input type="text" id="input4" maxlength="50" placeholder="Ingresa tu dependencia" />
+            <br> <br>
+            <div>
+                <button onclick="generarQR()">Generar QR</button>
+                <button onclick="location.href='generadorQR.html'">Generar nuevo QR</button>
+            </div>
+            <br> <br>
+            <div style="text-align: center;" id="qr-code">
+                <!-- Aqui se fromara el QR con los datos -->
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="qrfuncion.js"></script>
+<a href="index.html">Volver al inicio</a>
+</html>
+
+<!--Hacer un programa que te pide un numero celular y envia un mensaje mdeiante la api de whatsapp y que al picar enviar te mande a la pagina y talvez generar un bot con estilos-->
