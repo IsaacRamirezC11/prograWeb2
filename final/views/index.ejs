@@ -4,24 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 2px solid #333;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     
-<table>
-    <tr>
-        
-    </tr>
-    <% users.forEach(user => { %>
+    <h1>Lista de Usuarios</h1>
+    <table>
         <tr>
-            <td><%= user.name %></td>
-            <td><%= user.email %></td>
-            <td><%= user.age %></td>
-            <td>
-                <a href="/edit/<%= user.id %">Editar</a>
-                <a href="/delete/<%= user.id %">Eliminar</a>
-            </td>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Acciones</th>
         </tr>
-</table>
-
+        <% users.forEach(user => { %>
+            <tr>
+                <td><%= user.id %></td>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td>
+                    <a href="/edit/<%= user.id %>">Editar</a>
+                    <a href="/delete/<%= user.id %>">Eliminar</a>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+    <form action="/add" method="post">
+        <label for="name">Nombre: </label>
+        <input type="text" name="name" id="name" maxlength="45" required placeholder="Ingresa nombre">
+        <br><br>
+        <label for="email">Correo: </label>
+        <input type="text" name="email" id="email" maxlength="45" required placeholder="Ingresa correo">
+        <br><br>
+        <button type="submit">Registro</button>
+    </form>
 </body>
 </html>
